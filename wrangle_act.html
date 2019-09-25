@@ -19670,7 +19670,7 @@ memory usage: 152.1+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[170]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create the dataframe by merging twitter_archive_df with img_predictions</span>
@@ -19693,7 +19693,7 @@ memory usage: 152.1+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[171]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -19709,7 +19709,7 @@ memory usage: 152.1+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[69]:</div>
+    <div class="prompt output_prompt">Out[171]:</div>
 
 
 
@@ -19890,7 +19890,7 @@ memory usage: 152.1+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[172]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Replace &#39;None&#39; with nothing</span>
@@ -19905,7 +19905,7 @@ memory usage: 152.1+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[173]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -19965,7 +19965,7 @@ memory usage: 358.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[174]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check for duplicates tweet_id</span>
@@ -19982,7 +19982,7 @@ memory usage: 358.5+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[72]:</div>
+    <div class="prompt output_prompt">Out[174]:</div>
 
 
 
@@ -20061,7 +20061,7 @@ memory usage: 358.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[175]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Merge `dog stages` into the new column </span>
@@ -20081,7 +20081,7 @@ memory usage: 358.5+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[73]:</div>
+    <div class="prompt output_prompt">Out[175]:</div>
 
 
 
@@ -21606,7 +21606,7 @@ memory usage: 358.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[176]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">dog_stages</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -21622,7 +21622,7 @@ memory usage: 358.5+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[74]:</div>
+    <div class="prompt output_prompt">Out[176]:</div>
 
 
 
@@ -21647,18 +21647,95 @@ Name: dog_stages, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[177]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stages</span> <span class="o">=</span> <span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">dog_stages</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">stages</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[177]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;NoneNoneNoneNone&#39;,
+ &#39;NoneNonepupperNone&#39;,
+ &#39;doggoNoneNoneNone&#39;,
+ &#39;NoneNoneNonepuppo&#39;,
+ &#39;doggoNonepupperNone&#39;,
+ &#39;NoneflooferNoneNone&#39;,
+ &#39;doggoNoneNonepuppo&#39;,
+ &#39;doggoflooferNoneNone&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[178]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stages_clean</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;puppo&#39;</span><span class="p">,</span> <span class="s1">&#39;doggopupper&#39;</span><span class="p">,</span> <span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="s1">&#39;doggofloofer&#39;</span><span class="p">,</span> <span class="s1">&#39;doggopuppo&#39;</span><span class="p">]</span>
+<span class="n">stages_clean</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[178]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;None&#39;,
+ &#39;pupper&#39;,
+ &#39;doggo&#39;,
+ &#39;puppo&#39;,
+ &#39;doggopupper&#39;,
+ &#39;floofer&#39;,
+ &#39;doggofloofer&#39;,
+ &#39;doggopuppo&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[179]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Replace &#39;None&#39;</span>
-<span class="n">we_rate_dogs_clean</span> <span class="o">=</span> <span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;NoneNoneNoneNone&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">)</span>
-<span class="n">we_rate_dogs_clean</span> <span class="o">=</span> <span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;NoneNonepupperNone&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;pupper&#39;</span><span class="p">)</span>
-<span class="n">we_rate_dogs_clean</span> <span class="o">=</span> <span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;doggoNoneNoneNone&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;doggo&#39;</span><span class="p">)</span>
-<span class="n">we_rate_dogs_clean</span> <span class="o">=</span> <span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;NoneNoneNonepuppo&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;puppo&#39;</span><span class="p">)</span>
-<span class="n">we_rate_dogs_clean</span> <span class="o">=</span> <span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;doggoNonepupperNone&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;doggopupper&#39;</span><span class="p">)</span>
-<span class="n">we_rate_dogs_clean</span> <span class="o">=</span> <span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;NoneflooferNoneNone&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;floofer&#39;</span><span class="p">)</span>
-<span class="n">we_rate_dogs_clean</span> <span class="o">=</span> <span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;doggoNoneNonepuppo&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;doggopuppo&#39;</span><span class="p">)</span>
-<span class="n">we_rate_dogs_clean</span> <span class="o">=</span> <span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;doggoflooferNoneNone&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;doggofloofer&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">dog_stages</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())):</span>
+    <span class="n">we_rate_dogs_clean</span> <span class="o">=</span> <span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="n">stages</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="n">stages_clean</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    
 <span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">dog_stages</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 
@@ -21672,7 +21749,7 @@ Name: dog_stages, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[75]:</div>
+    <div class="prompt output_prompt">Out[179]:</div>
 
 
 
@@ -21697,7 +21774,7 @@ Name: dog_stages, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[181]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">we_rate_dogs_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
