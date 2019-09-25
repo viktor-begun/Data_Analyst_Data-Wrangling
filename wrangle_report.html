@@ -13200,6 +13200,11 @@ Only original ratings (no retweets) that have images are needed, however we have
 <li>entries without images = entries without urls = 2356 entries - 2297 expanded_urls = 59.  </li>
 <li>The columns <em>in_reply_to_status_id, in_reply_to_user_id, retweeted_status_id retweeted_status_user_id    retweeted_status_timestamp</em> that are not needed.</li>
 <li>The <em>timestamp</em> is object, while it should be date and time.</li>
+</ol>
+<ul>
+<li>The issue pointed by a referee: some ratings are wrongly extracted.</li>
+</ul>
+<ol>
 <li>There are only four sources of images: <em>Twitter for iPhone</em>, <em>Vine - Make a Scene</em>, <em>Twitter Web Client</em>, and <em>TweetDeck</em>, which is not seen, because the full url is given.</li>
 <li>Lower case names are not names.</li>
 </ol>
@@ -13225,11 +13230,9 @@ Only original ratings (no retweets) that have images are needed, however we have
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Tidiness-issues">Tidiness issues<a class="anchor-link" href="#Tidiness-issues">&#182;</a></h3><ol>
-<li>All tables can be merged into the new one on 'tweet_id' index. </li>
-</ol>
-<p><strong>in twitter-archive-enhanced.csv:</strong></p>
-<ol>
-<li>The dog "stage" (i.e. doggo, floofer, pupper, and puppo) is a variable. The "stage" should be one column.</li>
+<li>All the tables can be merged into the new one on 'tweet_id' index </li>
+<li>The dog "stage" (i.e. doggo, floofer, pupper, and puppo) is a variable. The 'stage' should be one column.</li>
+<li>The issue pointed by a referee: multiple dog stages.</li>
 </ol>
 
 </div>
@@ -13238,11 +13241,11 @@ Only original ratings (no retweets) that have images are needed, however we have
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-findings:">The findings:<a class="anchor-link" href="#The-findings:">&#182;</a></h2><ol>
+<h1 id="The-findings:">The findings:<a class="anchor-link" href="#The-findings:">&#182;</a></h1><ol>
 <li>The manual check of the figures shows that even with all three predictions as not dogs, there might be a dog in the picture, see, for example, the <a href="https://pbs.twimg.com/media/DBW35ZsVoAEWZUU.jpg">link</a>. Therefore, in order to clean this issue, one needs a manual check, or a better prediction algorithm, which is beyond the scope of this project.</li>
 <li>The <code>retweet count</code> and <code>favorite count</code> are correlated with each other with the correlation coefficient 0.93. However, they are practically independent from <code>rating numerator</code> and day of a week. </li>
-<li>A small correlation is observed between the length of the description <code>text</code>, <code>p1_dog</code>, <code>p2_dog</code> and <code>p1_conf</code> with the <code>favorite_count</code> only. The corresponding correlation coefficient can be rounded to 0.1. </li>
-<li>The most tweets are unclassified: <code>None</code> - 1963 tweets, <code>pupper</code> - 209, <code>doggo</code> - 72, <code>puppo</code> - 23, <code>floofer</code> - 8.</li>
+<li>A small correlation is observed between the length of the description <code>text</code>, <code>p2_dog</code> and <code>p1_conf</code> with the <code>favorite_count</code> only. The corresponding correlation coefficient can be rounded to 0.1. </li>
+<li>The most tweets are unclassified: <code>None</code> - 1661 tweets, <code>pupper</code> - 201, <code>doggo</code> - 62, <code>puppo</code> - 22, <code>floofer</code> - 7.</li>
 <li>The <code>None</code> and <code>pupper</code> distributions are non-gaussian, with heavy right tale, while <code>doggo</code>, <code>puppo</code> and <code>floofer</code> distributions have too litle entries to define the shape, see figures below.</li>
 <li>The favorite count distribution for <code>None</code> has two peaks. It may indicate that there is a group of unclasified images, which are much more popular than the rest.</li>
 <li>The average number of <code>favorite_count</code> is several times larger than the <code>retweet_count</code> for every dog 'stage', see figures below.</li>
