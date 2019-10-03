@@ -1,4 +1,4 @@
-# Data Wrangling Project from [Udacity](https://www.udacity.com/)
+# [Data Wrangling](https://en.wikipedia.org/wiki/Data_wrangling) Project from [Udacity](https://www.udacity.com/)
 ## Description
 The task of the project was to practice data gathering, cleaning, and analysis using the data produced by Twitter account [**WeRateDogs**](https://en.wikipedia.org/wiki/WeRateDogs). This account rates funny pictures with dogs and makes a humorous comment about it.
 
