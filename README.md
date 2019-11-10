@@ -16,4 +16,4 @@ The rating given by the account, the length of the description text, day of the 
 
 **Prerequisites and used libraries:** [Python](https://www.udacity.com/) enviroment (e.g. [Anaconda](https://www.anaconda.com)), [Jupyter Notebook](https://jupyter.org/), [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), [Requests](https://requests.kennethreitz.org/en/master/), [Tweepy](https://www.tweepy.org/), [Json](https://www.json.org/), [Matplotlib](https://matplotlib.org), [IPython](https://ipython.org/)
 
-  **The file with the project: `wrangle_act.ipynb`**
+  A more detailed **report** can be found in the **`wrangle_report.md`** file. The file with the **project: `wrangle_act.md`**
